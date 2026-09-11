@@ -58,12 +58,15 @@ def build_w01():
         ),
         nbf.v4.new_markdown_cell(
             "## 2. The question: decision, action, cost of a wrong call\n\n"
-            "- **Decision:** Which specific declining content URLs should the content marketing and editorial team schedule for an intensive content refresh during the upcoming sprint?\n"
-            "- **Who acts:** Senior content editors, technical SEO specialists, and copywriters.\n"
-            "- **Action taken:** Conducting structured content refreshes: updating outdated factual data and statistics, resolving intent shifts, adding missing subtopics, rewriting meta titles/descriptions, and pruning cannibalizing sections.\n"
-            "- **Cost of a wrong call:**\n"
-            "  - *False Positive (recommending a stable page or unrecoverable low-intent piece):* Wastes 6–10 hours of expensive editorial time on an asset that yields zero incremental traffic.\n"
-            "  - *False Negative (missing a high-traffic decaying pillar page):* Allows a flagship organic asset to slide off Page 1, leading to thousands of lost monthly organic visits and customer conversions."
+            "- **The Search Question:** Which specific declining content assets within an enterprise search portfolio exhibit sufficient historical search footprint and staleness signals to warrant a high-ROI editorial refresh?\n"
+            "- **Unit of Analysis:** A single content piece (`content_id` / page URL) for a given client observed over a 90-day evaluation window.\n"
+            "- **The Output:** A calibrated opportunity probability score $\\in [0, 1]$ estimating decay risk, coupled with an operational action tier (`refresh`, `monitor`, or `leave/prune`).\n"
+            "- **The Decision & Who Acts:** Senior content editors, technical SEO specialists, and copywriters deciding how to allocate sprint hours.\n"
+            "- **Action Taken:** Structured content refresh: updating outdated facts/statistics, resolving intent drift, adding missing subtopics, rewriting meta tags, and pruning obsolete sections.\n"
+            "- **Cost of a Wrong Call:**\n"
+            "  - *False Positive (recommending a stable or unrecoverable low-intent piece):* Wastes 6–10 hours of expensive editorial labor ($250–$500 per article) on an asset that yields zero incremental traffic.\n"
+            "  - *False Negative (missing a high-traffic decaying pillar page):* Allows a flagship organic asset to slide off Page 1, leading to thousands of lost monthly organic visits and compounding customer pipeline loss.\n"
+            "- **Why Data or ML Can Help at All (Why this is not just 'train a model'):** Heuristics (e.g., 'refresh anything older than 180 days') fail because staleness alone does not imply recovery potential or high exposure. An unassisted editor reviewing thousands of URLs faces cognitive overload. Supervised learning and ranking allow us to synthesize non-linear interactions between historical impressions, ranking position volatility, CTR, and decay rate to maximize Precision@K, ensuring that the top 10% of queued URLs deliver maximal business return per editorial hour spent."
         ),
         nbf.v4.new_code_cell(
             "# Quantifying editorial exposure and potential wasted hours\n"
