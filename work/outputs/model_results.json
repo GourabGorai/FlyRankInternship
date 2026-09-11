@@ -1,0 +1,29 @@
+{
+  "split_strategy": "client_holdout",
+  "test_size": 6163,
+  "base_rate": 0.5109524582184002,
+  "baseline": {
+    "precision_at_20": 0.8,
+    "precision_at_50": 0.7,
+    "precision_at_100": 0.64
+  },
+  "logistic_regression": {
+    "precision_at_20": 0.85,
+    "precision_at_50": 0.86,
+    "precision_at_100": 0.81,
+    "roc_auc": 0.5974332125954817
+  },
+  "decision_tree": {
+    "precision_at_20": 0.7,
+    "precision_at_50": 0.68,
+    "precision_at_100": 0.62,
+    "roc_auc": 0.5911429419141288
+  },
+  "random_forest": {
+    "precision_at_20": 0.45,
+    "precision_at_50": 0.46,
+    "precision_at_100": 0.54,
+    "roc_auc": 0.6020983267878934
+  },
+  "lift_at_50": 0.6571428571428573
+}

@@ -1,0 +1,9 @@
+{
+  "task": "Refresh Opportunity Scoring",
+  "base_rate": 0.5109524582184002,
+  "split": "client_holdout",
+  "test_rows": 6163,
+  "precision_at_20": 0.8,
+  "precision_at_50": 0.7,
+  "precision_at_100": 0.64
+}
