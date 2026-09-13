@@ -102,10 +102,17 @@ You are an expert Applied Machine Learning Engineer and Senior Technical Researc
 
 ---
 
-## 5. Account Setup & Verification Checklist
+## 5. Account Setup & Verification Evidence
 
 - [x] **Claude Account:** Set up at [claude.ai](https://claude.ai).
-- [x] **Claude Project Created:** Configured with the custom instructions above.
+- [x] **Claude Project Created:** Configured with custom instructions.
 - [x] **ChatGPT Account:** Set up at [chatgpt.com](https://chatgpt.com).
 - [x] **Anthropic Academy Account:** Enrolled in [AI Fluency: Framework & Foundations](https://anthropic.skilljar.com/ai-fluency-framework-foundations).
 - [x] **Module 1 Completed:** Completed Module 1 ("Foundations & Ethical AI Collaboration").
+
+### Screenshot 1: Configured Claude Project
+![Claude Project Settings](screenshots/claude_project_config.png)
+
+### Screenshot 2: Anthropic Academy Enrollment & Progress
+![Anthropic Academy Dashboard](screenshots/anthropic_academy_dashboard.png)
+
