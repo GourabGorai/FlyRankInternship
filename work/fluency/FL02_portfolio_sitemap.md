@@ -24,14 +24,14 @@
 
 | Page / Section | Role on the User Journey | Contents & Proof Elements |
 |---|---|---|
-| **1. Landing / Hero (`/`)** | Hook & State Claim | Immediate headline stating the claim, headline credibility metrics (+18% Lift@10 over baseline, client-holdout GroupKFold validation), and primary CTA button: *"Read the Search Ranking Case Study"*. |
-| **2. Flagship Case Study (`/flyrank-case-study`)** | The Empirical Proof | End-to-end FlyRank opportunity scoring engine: Problem framing $\rightarrow$ Data contract $\rightarrow$ Rule baseline $\rightarrow$ LightGBM GBDT model $\rightarrow$ Evaluation metrics (Precision@K, Lift). Includes architecture diagram and code verification snippets. |
+| **1. Landing / Hero (`/`)** | Hook & State Claim | Immediate headline stating the claim, headline credibility metrics (+18% Lift@10 over baseline, client-holdout GroupKFold validation), and primary CTA button: *"Read the Search Ranking Case Study"*. Strictly clean and fast (no heavy 3D/canvas distractions). |
+| **2. Flagship Case Study (`/flyrank-case-study`)** | The Empirical Proof | End-to-end FlyRank opportunity scoring engine: Problem framing $\rightarrow$ Data contract $\rightarrow$ Rule baseline $\rightarrow$ LightGBM GBDT model $\rightarrow$ Evaluation metrics (Precision@K, Lift). Includes architecture diagram, code verification snippets, and an embedded 20-minute calendar booking widget at the footer. |
 | **3. About & Engineering Rigor (`/about`)** | Technical Credibility | My background and three core principles of engineering rigor: (1) Client-holdout leakage prevention, (2) Defensive data validation contracts, (3) Disciplined non-causal reporting. Direct links to GitHub and Kaggle. |
-| **★ 4. The One Action (`/contact` / Inline Footer)** | Conversion | Embedded 20-minute calendar scheduler (Cal.com/Calendly), email link, and downloadable CV. |
+| **★ 4. The One Action (`/contact` / Embedded Calendar)** | Conversion | Direct 20-minute calendar scheduler (Cal.com/Calendly), email link, and downloadable CV embedded directly at high-intent decision points. |
 
 ---
 
-## 3. Sitemap Sketch
+## 3. Deliverable 1: Portfolio Sitemap Sketch
 
 Below is the sketch of the user journey from landing to taking the one action:
 
@@ -39,49 +39,31 @@ Below is the sketch of the user journey from landing to taking the one action:
 
 ---
 
-## 4. Claude Project Configuration (Tutor Persona)
+## 4. Deliverable 2: Configured Claude Project (Tutor Persona)
 
-### Project Name:
-`FlyRank Portfolio Build & ML Career Partner`
+### Project Setup:
+- **Project Name:** `Portfolio Build & ML Career Partner`
+- **Project Description:** `Sitemap, narrative architecture, and technical tutor for 8-week portfolio build.`
+- **Configured Instructions:** Custom instructions established holding to the "One Claim, One Person, One Action" rule and acting as a demanding technical tutor.
 
-### Project Description:
-`Dedicated AI workspace and tutoring partner for the 8-week portfolio build, narrative structuring, and technical pressure-testing.`
-
-### Custom Instructions:
-```markdown
-# Role & Identity
-You are a senior engineering mentor, technical recruiter, and tutor helping Gourab Gorai build his production ML portfolio.
-
-# My Proof Statement
-"I build production-grade search ranking and tabular machine learning pipelines that identify and prioritize declining search content with leak-free evaluation. Built for an ML Engineering Lead or Technical Recruiter at a growth-stage search/data company, so they will review my flagship case study and schedule a 20-minute technical interview."
-
-# Tutoring & Communication Guidelines
-- Act as a demanding but constructive tutor: do not write generic filler for me. Challenge my assumptions, identify blind spots, and explain the reasoning behind every design suggestion.
-- Hold me to the "One Claim, One Person, One Action" rule across every page and component.
-- Keep tone direct, mathematically sound, and focused on verifiable engineering substance.
-```
+![Configured Claude Project](screenshots/claude_project_portfolio_build.png)
 
 ---
 
-## 5. Pressure-Test Prompt & Output
+## 5. Deliverable 3: Pressure-Test Prompt & Output
 
-### The Prompt Ran in Claude:
-> *"Here is my proof statement and my proposed 4-page portfolio sitemap:*  
-> *Proof Statement: 'I build production-grade search ranking and tabular machine learning pipelines that identify and prioritize declining search content with leak-free evaluation. Built for an ML Engineering Lead or Technical Recruiter at a growth-stage search/data company, so they will review my flagship case study and schedule a 20-minute technical interview.'*  
-> *Proposed Sitemap:*  
-> *1. Home / Hero (States claim, headline metrics, CTA to Case Study)*  
-> *2. Case Study: FlyRank Content Opportunity Engine (Problem, data contract, baseline, LightGBM model, evaluation metrics)*  
-> *3. About & Engineering Rigor (My ML background, 3 core principles of rigor, links to GitHub/LinkedIn)*  
-> *4. Contact / Book a Call (Standalone contact page with calendar booking widget and email)*  
-> *Please pressure-test this sitemap:*  
-> *1. Where will a busy ML hiring manager experience friction or drop off before booking a call?*  
-> *2. Does every page earn its place, or should any page be merged or eliminated?*  
-> *3. What is ONE specific change you recommend I make to maximize the likelihood of getting the interview booked?"*
+### The Pressure-Test Session:
+The sitemap and proof statement were pressure-tested inside the Claude Project:
 
-### Claude's Pressure-Test Findings:
-1. **Friction Point:** A standalone `/contact` page forces an extra click and page reload right when the hiring manager has finished reading the case study and has the highest conviction to contact you.
-2. **Page Redundancy:** A separate contact page is unnecessary for a single-project portfolio.
+![Claude Pressure Test Prompt and Output](screenshots/claude_pressure_test.png)
+
+### Key Feedback from Claude:
+1. **Friction & Drop-off Risk:**  
+   *"Home page — the biggest risk, and it's specific to you. Your existing portfolio site runs Three.js WebGL solar systems and cinematic intro sequences. If that instinct bleeds into this site's Home page, you lose the hiring manager before they read a single word of the proof..."*
+2. **Hiring Manager Reality:**  
+   A technical lead spends 15 seconds reviewing on one tab with no patience for aesthetic bloat. They want immediate empirical signal: the problem, the metrics, and the code.
 
 ### The Concrete Change Noted (Pass / Revise Requirement):
 > **Change Adopted:**  
-> *Instead of isolating the booking widget on an external `/contact` page, I will embed the 20-minute calendar scheduler directly at the end of the Flagship Case Study as an inline conversion block, while retaining a persistent 'Book Technical Chat' CTA button in the header navigation.*
+> 1. **Strip All Heavy Visual Bloat:** I will completely forgo cinematic Three.js WebGL animations or multi-second intro sequences. The landing page will load in under 1 second, leading immediately with the headline claim and the hard proof metric (+18% Lift@10 with GroupKFold).  
+> 2. **Direct Conversion Flow:** Instead of forcing the visitor to navigate away to a separate `/contact` page, the 20-minute interview calendar booking block will be embedded directly at the conclusion of the Flagship Case Study.
